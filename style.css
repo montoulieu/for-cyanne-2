@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script');
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow: hidden;
+  background-color: cyan;
+  font-family: 'Nanum Pen Script';
+}
+
+.bg {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.home .bg {
+  background-image: url('images/heart-bg.gif');
+  opacity: 0.5;
+  background-size: 140%;
+}
+.chickenbutt .bg {
+  background-image: url('images/chicken-butts.jpg');
+  opacity: 0.75;
+  animation: chickenButtScroll 3s ease-in-out forwards infinite;
+}
+.chickenbutt .main-title {
+  animation: textScale 1s ease-in-out forwards infinite;
+}
+
+.main-title {
+  color: white;
+  text-shadow: 0 0 3px rgba(0,0,0,.55);
+  font-weight: 700;
+  line-height: .9;
+  /* animation: textScale 1s ease-in-out forwards infinite; */
+}
+
+p {
+  color: white;
+  text-shadow: 0 0 1px rgba(0,0,0,1);
+  font-size: 1.68rem;
+  letter-spacing: -.5px;
+  line-height: 0.9;
+  /* margin-bottom: 0.5rem; */
+}
+.btn-info {
+  background-color: cyan;
+  border-color: cyan;
+  text-shadow: 0 0 1px rgba(0,0,0,.75);
+  font-size: 1.8rem;
+}
+
+
+@keyframes textScale{
+    0%{transform: scale(.5) rotateZ(-30deg);; color: cyan; text-shadow: 0 0 15px white;}
+    50%{transform: scale(1.5) rotateZ(30deg); color: white; text-shadow: 0 0 15px cyan;}
+    100%{transform: scale(.5) rotateZ(-30deg); color: cyan; text-shadow: 0 0 15px white;}
+}
+
+@keyframes chickenButtScroll{
+    0%{background-position: 0 0;}
+    50%{background-position: 100% 0;}
+    100%{background-position: 0 0;}
+}
